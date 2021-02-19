@@ -35,6 +35,7 @@ class Database:
 # ------------------ Kafka Settings ------------------
 
 kafka_consumer_params = config("kafka-consumer")
+print(kafka_consumer_params)
 consumer = KafkaConsumer("demo-topic", **kafka_consumer_params)
 
 kafka_producer_params = config("kafka-producer")
