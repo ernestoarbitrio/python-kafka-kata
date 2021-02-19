@@ -32,7 +32,6 @@ pycodestyle==2.6.0
 pyflakes==2.2.0
 Pygments==2.8.0
 pyparsing==2.4.7
-pytest==6.2.2
 regex==2020.11.13
 requests==2.25.1
 schedule==1.0.0
