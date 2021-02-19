@@ -11,6 +11,8 @@ import requests
 
 
 class MockServerRequestHandler(BaseHTTPRequestHandler):
+    """Objects that simulates an HTTP server to be used in unit tests."""
+
     API_PATTERN = re.compile(r"/data/")
 
     def _set_headers(self):

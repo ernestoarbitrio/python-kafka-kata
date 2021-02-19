@@ -1,3 +1,7 @@
+# encoding: utf-8
+
+"""This module contains all the settings required for kafka and postgresql."""
+
 import psycopg2
 from kafka import KafkaConsumer, KafkaProducer
 from psycopg2.extras import RealDictCursor
@@ -13,7 +17,14 @@ db_params = config("postgresql")
 
 
 class Database:
-    """Database object helper."""
+    """Database object helper.
+
+    Usage:
+        >>> db = Database()
+        >>> result = db.query("SELECT * FROM table;")
+        >>> print(result.fetchall())
+        [(1, "John", "Doe"), (2, "Foo", "Bar")]
+    """
 
     def __init__(self):
         self.connection = psycopg2.connect(**db_params)
@@ -21,7 +32,8 @@ class Database:
 
     def query(self, *args):
         """Execute the query through the psycopg2 cursor and return itself for the
-        results fetching."""
+        results fetching.
+        """
         self.cursor.execute(*args)
         self.connection.commit()
         return self.cursor
