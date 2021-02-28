@@ -4,7 +4,7 @@
 <img alt="CI" src="https://github.com/ernestoarbitrio/python-kafka-kata/workflows/CI/badge.svg?branch=main">
 </a>
 
-This is a kata on producing website statistics (e.g. reponse time, error code, etc...)
+This is a kata on producing website statistics (e.g. response time, error code, etc...)
 using `kafka-python` (https://pypi.org/project/kafka-python/).
 
 The code included simulate a system that monitors website availability over the
